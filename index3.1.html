@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AR com Marcador - A-Frame + AR.js</title>
+    <!-- A-Frame -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <!-- AR.js com suporte ao A-Frame -->
+    <script src="aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <!-- Marcador tipo Hiro -->
+      <a-marker preset="hiro">
+        <!-- Cubo vermelho sobre o marcador -->
+        <a-box position="0 0.5 0" color="#FF0000" animation="property: rotation; to: 0 360 0; loop: true; dur: 4000">
+        </a-box>
+      </a-marker>
+
+      <!-- Câmera -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
